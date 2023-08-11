@@ -14,7 +14,7 @@ const addNote = asyncHandler(async (req, res) => {
 });
 
 // Get all notes
-const getNotes = asyncHandler(async (res) => {
+const getNotes = asyncHandler(async (req, res) => {
     try {
         const notes = await Note.find({});
         res.status(200).json(notes);
