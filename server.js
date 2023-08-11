@@ -17,10 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api', noteRoute);
 
-
-app.get('/', () => {
-})
-
 app.use(errorMiddleware);
 
 mongoose.set("strictQuery", false);
